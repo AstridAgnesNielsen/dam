@@ -1,0 +1,7523 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "alder",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column alder using value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tienestekarl",
+          "Tieneste Karl",
+          "tienestekarl",
+          "Tieneste-Karl",
+          "Tieniste Karl",
+          "Tienstekarl",
+          "Tienestkarl",
+          "Tienistekarl",
+          "tieneestekarl",
+          "tieneste Karl",
+          "tieneste karl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjenestekarl"
+      },
+      {
+        "from": [
+          "Husbonde",
+          "Huusbonde",
+          "husbond",
+          "Hosbonde",
+          "huusbonde",
+          "Huusbond",
+          "hosbond"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Husbond"
+      },
+      {
+        "from": [
+          "hendes søn",
+          "hendes Søn",
+          "Hendes Søn",
+          "Hands Søn",
+          "Hendes søn",
+          "hands søn",
+          "hendis søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "tjenestekarl",
+          "Tjenestekarl",
+          "Tjeneste Karl",
+          "Tjennestekarl",
+          "Tjeneste-Karl",
+          "Tjenstekarl",
+          "tjenstekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      },
+      {
+        "from": [
+          "Konens Broder",
+          "Konens Broder, tjenestekarl",
+          "Konens broder",
+          "Koenens Broder",
+          "Konens Broder og Tienestekarl",
+          "konens broder",
+          "konens brodersøn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "Huusbondens Broder",
+          "Hosbondens Broder",
+          "Huusbondens Broder og tienestekarl",
+          "Huusbondens Brodersøn",
+          "husbondens broder",
+          "husbondens broder, der tiener ham"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "--",
+          "-0",
+          "?"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "--"
+      },
+      {
+        "from": [
+          "Hendes Broder",
+          "Hands Broder-Søn som tiener ham",
+          "hendes Broder"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "Mandens Broder",
+          "mandens broder",
+          "Mandens Broder Søn og Tienestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "Læredreng",
+          "læredreng",
+          "Læredræng"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Læredreng"
+      },
+      {
+        "from": [
+          "hans broder",
+          "hans Broder",
+          "Hans Broder"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "hans Søn af 1ste Ægteskab",
+          "hans søn af 1ste ægteskab",
+          "Hans Søn af 1ste Ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "hans søn",
+          "hans Søn",
+          "Hans Søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "deres søn",
+          "deres Søn",
+          "Deres Søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "hans søn af 1. Ægteskab",
+          "hans søn af 1. ægteskab",
+          "hans Søn af 1. ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "mandens søn af første ægteskab",
+          "Mandens Søn af 1ste Ægteskab",
+          "Mandens Søn af første Ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "Tieneste Dreng",
+          "Tienestedreng",
+          "Tieneste dreng"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjenestedreng"
+      },
+      {
+        "from": [
+          "hendes Karl",
+          "hendes karl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Karl"
+      },
+      {
+        "from": [
+          "Tiener",
+          "tiener"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tiener"
+      },
+      {
+        "from": [
+          "Smedesvend",
+          "smedesvend"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Smedesvend"
+      },
+      {
+        "from": [
+          "Hans Halv Broder",
+          "hans halv Broder"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "søn",
+          "Søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "hendes søn af 2det ægteskab",
+          "hendes søn af 1te ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "hendes Søn af 1ste Ægteskab",
+          "hendes søn af 1ste ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "Søn af 2. Ægteskab",
+          "Søn af 1. Ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "tjenestekarl for løjtnanten",
+          "tjenestekarl, Avlskarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl for løjtnanten"
+      },
+      {
+        "from": [
+          "Deres Søn af sidste Ægteskab",
+          "deres søn af sidste Ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "Ungkarl",
+          "ungkarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Ungkarl"
+      },
+      {
+        "from": [
+          "deres stedsøn",
+          "deres Stedsøn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "Karl",
+          "karl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Karl"
+      },
+      {
+        "from": [
+          "hans tjenestekarl",
+          "hans tjenestedreng"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      },
+      {
+        "from": [
+          "Huusbondens Stedsøn af første Ægtsk",
+          "husbondens søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      },
+      {
+        "from": [
+          "hans karl",
+          "hans Karl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      },
+      {
+        "from": [
+          "konens søskende og tjenestekarl",
+          "konens søskende, tjenestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      },
+      {
+        "from": [
+          "Huusbondens Halvbroder",
+          "Huusbondens Halvbrodersøn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit of cells in famstand column"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "inquarteret",
+          "inquartiert"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "inquarteret"
+      },
+      {
+        "from": [
+          "tjenestekarl",
+          "Tjenestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      },
+      {
+        "from": [
+          "Tjenestedreng",
+          "tjenestedreng"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjenestedreng"
+      },
+      {
+        "from": [
+          "logerende",
+          "Logerende"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "logerende"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "deres tjenestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "alder",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column alder using value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "alder",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column alder using value.toNumber()"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "alder",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column alder using value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "erhverv",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "National Soldat",
+          "nationalsoldat",
+          "Nationalsoldat",
+          "national Soldat",
+          "National-Soldat",
+          "National Soldat og Skræder",
+          "National Soldat der blot i nogle Uger tersker",
+          "National Soldat og Væver",
+          "National Soldat, Smed Swend",
+          "National Soldat, Snedker Swend",
+          "Nationalsoldat og tjener sin Broder",
+          "Nationalsoldat, Skrædersvend",
+          "national soldat",
+          "nationalsoldat og væversvend",
+          "nationalsoldat ved 1. Jyske Inf. Reg."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat"
+      },
+      {
+        "from": [
+          "Land Recrut",
+          "Land Rekrut",
+          "Land-Recrut",
+          "Landrecrut",
+          "Landrekrut",
+          "land rekrut"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Recrut"
+      },
+      {
+        "from": [
+          "Gevorben Soldat",
+          "gevorben Soldat",
+          "Gevorben Soldat fra Aarhuus",
+          "gevorben soldat ved 1. Jyske Inf. Reg.",
+          "gevorbne soldat ved 1. Jyske Inf. Reg."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat"
+      },
+      {
+        "from": [
+          "geworben soldat",
+          "geworben soldat ved 1. Jyske Inf. Reg.",
+          "Geworben Soldat",
+          "geworben Soldat",
+          "geworben Soldat og Væver"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat"
+      },
+      {
+        "from": [
+          "Landsoldat",
+          "landsoldat",
+          "Land-Soldat",
+          "Land Soldat",
+          "land Soldat"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat"
+      },
+      {
+        "from": [
+          "Enroulleret Matros",
+          "Enrolleret Matros, og nu udskreven til Tieniste",
+          "Enroulleret matros",
+          "enroulleret Matros",
+          "inrouleret Matros"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Matros"
+      },
+      {
+        "from": [
+          "Bonde og Gaardbeboer",
+          "Bonde og Gaard Beboer",
+          "bonde og gaardbeboer",
+          "bonde og gårdbeboer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bonde og Gaardbeboer"
+      },
+      {
+        "from": [
+          "nationalrytter",
+          "National Rytter",
+          "Nationalrytter",
+          "national rytter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "nationalrytter"
+      },
+      {
+        "from": [
+          "Huusmand med Jord og Skræder",
+          "Huusmand med Jord og Smed",
+          "Huusmand med Jord og Træskomand",
+          "huusmand med jord og smed"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Huusmand "
+      },
+      {
+        "from": [
+          "Land-Soldat og Skræder",
+          "Landsoldat og tjener Faderen",
+          "landsoldat og væver"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat og Skrædder"
+      },
+      {
+        "from": [
+          "Snedker",
+          "[Snedker]",
+          "snedker"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Snedker"
+      },
+      {
+        "from": [
+          "skræddersvend",
+          "Skrædersvend",
+          "skrædersvend"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "skræddersvend"
+      },
+      {
+        "from": [
+          "Skræder",
+          "Skrædder",
+          "skræder"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Skrædder"
+      },
+      {
+        "from": [
+          "Jordløs Huusmand og Wæwer",
+          "Jordløs Huusmand Smed og Nat: Soldat",
+          "Jordløs Huusmand, Væver"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Huusmand og Wæwer"
+      },
+      {
+        "from": [
+          "Smeddesvend",
+          "Smedsvend",
+          "smedesvend"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Smeddesvend"
+      },
+      {
+        "from": [
+          "musketer ved 1. Jyske Inf. Reg.",
+          "musqueter ved 1. Jyske Inf. Reg.",
+          "musketeer ved 1. Jyske Inf. Reg."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Musketer "
+      },
+      {
+        "from": [
+          "Vanfør og Skræder",
+          "vanfør og skrædder",
+          "vanfør og skræder"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Skrædder"
+      },
+      {
+        "from": [
+          "Land Rytter",
+          "Land-Rytter",
+          "landrytter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Landrytter"
+      },
+      {
+        "from": [
+          "Møllersvend",
+          "Møllersvænd",
+          "møllersvend"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Møllersvend"
+      },
+      {
+        "from": [
+          "Artillerist",
+          "artillerist"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Artillerist"
+      },
+      {
+        "from": [
+          "Gartner",
+          "gartner"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Gartner"
+      },
+      {
+        "from": [
+          "Recrut",
+          "recrut"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Recrut"
+      },
+      {
+        "from": [
+          "kobbersmedesvend",
+          "kobbersmedsvend"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "kobbersmedesvend"
+      },
+      {
+        "from": [
+          "Forvalter ved Godset",
+          "forvalter ved godset"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Forvalter"
+      },
+      {
+        "from": [
+          "Bødker",
+          "bødker"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Bødker"
+      },
+      {
+        "from": [
+          "Rygter",
+          "Røgter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rygter"
+      },
+      {
+        "from": [
+          "Rytter",
+          "rytter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rytter"
+      },
+      {
+        "from": [
+          "Væverdreng",
+          "væverdreng"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Væverdreng"
+      },
+      {
+        "from": [
+          "tjenestekarl",
+          "Tjenestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      },
+      {
+        "from": [
+          "skipper",
+          "Skipper"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "skipper"
+      },
+      {
+        "from": [
+          "daglejer",
+          "Daglejer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "daglejer"
+      },
+      {
+        "from": [
+          "Forvalter",
+          "forvalter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Forvalter"
+      },
+      {
+        "from": [
+          "Fuldmægtig",
+          "fuldmægtig"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fuldmægtig"
+      },
+      {
+        "from": [
+          "Gaaer i Dagleje",
+          "gaar i Dagleje"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Daglejer"
+      },
+      {
+        "from": [
+          "Informator",
+          "informator"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Informator"
+      },
+      {
+        "from": [
+          "Soldat",
+          "soldat"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat"
+      },
+      {
+        "from": [
+          "Nat: Soldat",
+          "Nat. Soldat"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat"
+      },
+      {
+        "from": [
+          "soldat ved 1. Jyske Inf. Reg.",
+          "soldat ved 2. Jyske Inf. Reg."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat "
+      },
+      {
+        "from": [
+          "Snedkerdreng",
+          "snedkerdreng"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Snedkerdreng"
+      },
+      {
+        "from": [
+          "fendrik ved 1. Jyske Inf. Reg.",
+          "fændrik ved 1. Jyske Inf. Reg."
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Fendrik "
+      },
+      {
+        "from": [
+          "Møller Svend og Nat. Soldat",
+          "Møllersvend og Nationalsoldat"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Møller Svend og Soldat"
+      },
+      {
+        "from": [
+          "Reserve Soldat",
+          "Reserve-Soldat"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat"
+      },
+      {
+        "from": [
+          "Geworben Landsoldat",
+          "geworben landsoldat"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat"
+      },
+      {
+        "from": [
+          "læredreng",
+          "Læredreng"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Læredreng"
+      },
+      {
+        "from": [
+          "skomagersvend",
+          "Skomagersvend"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "skomagersvend"
+      },
+      {
+        "from": [
+          "Land Artillerist",
+          "Lande Artillerist"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Artillerist"
+      },
+      {
+        "from": [
+          "Geworben Rytter",
+          "geworben rytter"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Rytter"
+      },
+      {
+        "from": [
+          "svend",
+          "Svend"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "svend"
+      },
+      {
+        "from": [
+          "Væver",
+          "væver"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Væver"
+      },
+      {
+        "from": [
+          "tjener Forældrene",
+          "Tjener Forældrene for Kost og Løn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjener Forældrene"
+      },
+      {
+        "from": [
+          "student",
+          "Student"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "student"
+      },
+      {
+        "from": [
+          "Material Kudsk",
+          "Materialkudsk"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Material Kusk"
+      },
+      {
+        "from": [
+          "Indsidder og Skoemager samt Reserve Rytter",
+          "Indsidder og Skræder"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indsidder og Skoemager samt Rytter"
+      },
+      {
+        "from": [
+          "Indsidder",
+          "Indsider"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Indsidder"
+      },
+      {
+        "from": [
+          "Soldat som national og Tieneste Karl",
+          "Soldat som national og Tienestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat og Tieneste Karl"
+      },
+      {
+        "from": [
+          "skriverkarl",
+          "Skriverkarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "skriverkarl"
+      },
+      {
+        "from": [
+          "avlskarl",
+          "Avlskarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "avlskarl"
+      },
+      {
+        "from": [
+          "skriverdreng",
+          "Skriverdreng"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "skriverdreng"
+      },
+      {
+        "from": [
+          "Skriver",
+          "skriver"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Skriver"
+      },
+      {
+        "from": [
+          "gårdskarl",
+          "Gaardskarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "gårdskarl"
+      }
+    ],
+    "description": "Mass edit cells in column erhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "erhverv",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Matros",
+          "matros"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Matros"
+      },
+      {
+        "from": [
+          "daglejer",
+          "Daglejer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "daglejer"
+      },
+      {
+        "from": [
+          "Soldat og Skrædder",
+          "soldat og skrædder"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat og Skrædder"
+      },
+      {
+        "from": [
+          "Soldat",
+          "Soldat "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat"
+      },
+      {
+        "from": [
+          "Soldat og Tieneste Karl",
+          "Soldat og Tienestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Soldat og Tieneste Karl"
+      }
+    ],
+    "description": "Mass edit cells in column erhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "erhverv",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Vanfør og nyder Hospitalshold",
+          "Vanfør og nyder af Linaae Hospital Understøttelse",
+          "vanfør og nyder Almisse"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Vanfør og nyder Hospitalshold"
+      },
+      {
+        "from": [
+          "nyder Almisse af Sognet",
+          "nyder almisse af Sognet"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "nyder Almisse af Sognet"
+      },
+      {
+        "from": [
+          "Vanfør",
+          "vanføer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Vanfør"
+      }
+    ],
+    "description": "Mass edit cells in column erhverv"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hendes søstersøn og tjenestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mand"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Husbond"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "inquarteret"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "inkvarteret"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "inkvarteret"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "indkvarteret"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "mandens stedsøn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hendes stedsøn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "søn af konens 1te ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "deres fælles søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hans søn af 1te ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "søn af 2det ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hans stifsøn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "indkvarteret"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "logerende"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "søn af sidste ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "disses søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "sidstn. søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tienestekarl og Huusbondens Broder"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tjenestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "tjenestekarl for løjtnanten"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl "
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "tjenestekarl "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl "
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "beboer en Lejestue"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "logerende"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "begges Stedbarn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "broder"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Den afdøde Mands Søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "dennes Søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "deres Barn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "deres Pleie Søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Deres Stif Søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "deres søn af 2. ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "deres søn af mandens 2et ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "en søn af mandens 1te ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "grevindens tjenestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Gaardmandens Søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hands Stifsøn og tjenestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hans Broder og Tjeneste Karl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hans brodersøn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hans børn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hans sted-søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hans søn af 2det Egteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hans søn af andet ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hans søn af første Ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hans søstersøn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Har en Stue til Leye"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "logerende"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hende søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hendes Dattersøn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hendes Søn af 1. Ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hendes søn af andet ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "hendes søn af første ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "husfader"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Huusbonden"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Huusmoderens Søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "huusbondens tjenestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "konens barn af 1. ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "indlogerende i Skolehuset"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "logerende"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Konens Halvsøskende"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Konens Stifsøn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Konens Søster-Søn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "logeren"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "logerende"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Logerende i Degne Boligen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "logerende"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "logerer"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "logerende"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "mandens barn af 1. ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Mandens Beslægtede"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "mandens stifbarn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "mandens søstersøn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "stedsøn"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Søn af 1ste Ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "søn af første ægteskab"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Søn af Præsten"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "familiemedlem"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Til Leye"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "logerende"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "til Ophold"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "logerende"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "tjenestekarl hos Forpagteren"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Karl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "opholdende"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "logerende"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "tjenestekarl "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "deres Karl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tjenestedreng"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Tienestesvend"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "deris tienestekarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Gaardskarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "tjenestekarl"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Lærerdreng hos Sønnen"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Lærerdreng "
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Hans Svend"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "svend"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "væverkarl"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "væversvend"
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "mand",
+                "l": "mand"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "list",
+          "name": "civilstand",
+          "expression": "value",
+          "columnName": "civilstand",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "ugift",
+                "l": "ugift"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        },
+        {
+          "type": "range",
+          "name": "alder",
+          "expression": "value",
+          "columnName": "alder",
+          "from": 20,
+          "to": 30,
+          "selectNumeric": true,
+          "selectNonNumeric": true,
+          "selectBlank": true,
+          "selectError": true
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "famstand",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "Lærerdreng "
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "Læredreng "
+      }
+    ],
+    "description": "Mass edit cells in column famstand"
+  }
+]
