@@ -1,0 +1,86 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "alder",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column alder using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "u",
+                "l": "u"
+              }
+            },
+            {
+              "v": {
+                "v": "n",
+                "l": "n"
+              }
+            },
+            {
+              "v": {
+                "v": "g",
+                "l": "g"
+              }
+            },
+            {
+              "v": {
+                "v": "2",
+                "l": "2"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "columnName": "koen",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "u"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "K"
+      }
+    ],
+    "description": "Mass edit cells in column koen"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "row-based"
+    },
+    "columnName": "civilstand",
+    "expression": "grel:if(toLowercase(value) == \"gift\", \"gift\", \"ugift\")",
+    "onError": "keep-original",
+    "repeat": true,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column civilstand using expression grel:if(toLowercase(value) == \"gift\", \"gift\", \"ugift\")"
+  }
+]

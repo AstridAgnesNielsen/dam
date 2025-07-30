@@ -1,0 +1,230 @@
+[
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "alder",
+    "expression": "value.toNumber()",
+    "onError": "keep-original",
+    "repeat": false,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column alder using expression value.toNumber()"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "g",
+                "l": "g"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "record-based"
+    },
+    "columnName": "koen",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "g"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "K"
+      }
+    ],
+    "description": "Mass edit cells in column koen"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "h",
+                "l": "h"
+              }
+            },
+            {
+              "v": {
+                "v": "g",
+                "l": "g"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "record-based"
+    },
+    "columnName": "koen",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "h"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "K"
+      }
+    ],
+    "description": "Mass edit cells in column koen"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "k",
+                "l": "k"
+              }
+            },
+            {
+              "v": {
+                "v": "h",
+                "l": "h"
+              }
+            },
+            {
+              "v": {
+                "v": "g",
+                "l": "g"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "record-based"
+    },
+    "columnName": "koen",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "k"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "K"
+      }
+    ],
+    "description": "Mass edit cells in column koen"
+  },
+  {
+    "op": "core/mass-edit",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "koen",
+          "expression": "value",
+          "columnName": "koen",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": "u",
+                "l": "u"
+              }
+            },
+            {
+              "v": {
+                "v": "n",
+                "l": "n"
+              }
+            },
+            {
+              "v": {
+                "v": "k",
+                "l": "k"
+              }
+            },
+            {
+              "v": {
+                "v": "h",
+                "l": "h"
+              }
+            },
+            {
+              "v": {
+                "v": "g",
+                "l": "g"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "record-based"
+    },
+    "columnName": "koen",
+    "expression": "value",
+    "edits": [
+      {
+        "from": [
+          "u"
+        ],
+        "fromBlank": false,
+        "fromError": false,
+        "to": "K"
+      }
+    ],
+    "description": "Mass edit cells in column koen"
+  },
+  {
+    "op": "core/text-transform",
+    "engineConfig": {
+      "facets": [],
+      "mode": "record-based"
+    },
+    "columnName": "civilstand",
+    "expression": "grel:if(or([\"gift\", \"givt\", \"giwt\", \"frasep.\"].inArray(toLowercase(value)), toLowercase(value).contains(\"separer\") ), \"gift\", \"ugift\")",
+    "onError": "keep-original",
+    "repeat": true,
+    "repeatCount": 10,
+    "description": "Text transform on cells in column civilstand using expression grel:if(or([\"gift\", \"givt\", \"giwt\", \"frasep.\"].inArray(toLowercase(value)), toLowercase(value).contains(\"separer\") ), \"gift\", \"ugift\")"
+  }
+]
