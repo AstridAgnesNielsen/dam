@@ -121,7 +121,7 @@ Do you remember how to calculate an average on a vector object? If not, review t
 
 ```{r}
 
-# We use two different methods to calculate the average reign duration:
+# I use two different methods to calculate the average reign duration:
 
 # Subsetting as a vector with mean()
 duration1 <- c(kings$end_first_reign_year-kings$start_first_reign_year)
@@ -143,7 +143,7 @@ You have calculated the average duration above. Use it now to `filter()` the `du
 
 ```{r}
 
-# We create a new 'kings_long' data frame that only includes monarchs with above average reign durations. The count function tells us how many of these there are.
+# I create a new 'kings_long' data frame that only includes monarchs with above average reign durations. The count function tells us how many of these there are.
 
 kings_long <-  filter(kings, duration > average_duration)
 select(kings_long, monarch_name, duration)
@@ -160,7 +160,7 @@ count(kings_long)
 
 ```{r}
 
-# We use the slice function to select the highest 3 durations. Note: Christian 9. and Erik af Pommern ruled for the same amount of years, so they're both in third.
+# I use the slice function to select the highest 3 durations. Note: Christian 9. and Erik af Pommern ruled for the same amount of years, so they're both in third.
 
 # The average year is 365.2425 days long when you also include leap years. (which is what I think Adela is talking about.) 
 

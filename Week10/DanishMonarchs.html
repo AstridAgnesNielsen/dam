@@ -14,7 +14,7 @@
 
 <title>Danish Kings Homework for Week 10</title>
 
-<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+<script>// Pandoc 2.9 adds attributes on both header and div. I remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
 document.addEventListener('DOMContentLoaded', function(e) {
   var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
@@ -516,7 +516,7 @@ The <code>mean()</code> function can only be run on a vector. The
 Coerce your data to numbers with <code>as.numeric()</code>.</li>
 <li>Remember to handle NAs: <code>mean(X, na.rm=TRUE)</code></li>
 </ul>
-<pre class="r"><code># We use two different methods to calculate the average reign duration:
+<pre class="r"><code># I use two different methods to calculate the average reign duration:
 
 # Subsetting as a vector with mean()
 duration1 &lt;- c(kings$end_first_reign_year-kings$start_first_reign_year)
@@ -543,7 +543,7 @@ reign?</h2>
 <code>filter()</code> the <code>duration</code> column in
 <code>kings</code> dataset. Display the result and also count the
 resulting rows with <code>count()</code></p>
-<pre class="r"><code># We create a new &#39;kings_long&#39; data frame that only includes monarchs with above average reign durations. The count function tells us how many of these there are.
+<pre class="r"><code># I create a new &#39;kings_long&#39; data frame that only includes monarchs with above average reign durations. The count function tells us how many of these there are.
 
 kings_long &lt;-  filter(kings, duration &gt; average_duration)
 select(kings_long, monarch_name, duration)</code></pre>
@@ -578,7 +578,7 @@ you calculate the total number of days they ruled</li>
 <li>BONUS: consider the transition year (with 366 days) in your
 calculation!</li>
 </ul>
-<pre class="r"><code># We use the slice function to select the highest 3 durations. Note: Christian 9. and Erik af Pommern ruled for the same amount of years, so they&#39;re both in third.
+<pre class="r"><code># I use the slice function to select the highest 3 durations. Note: Christian 9. and Erik af Pommern ruled for the same amount of years, so they&#39;re both in third.
 
 # The average year is 365.2425 days long when you also include leap years. (which is what I think Adela is talking about.) 
 
