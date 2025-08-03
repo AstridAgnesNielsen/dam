@@ -107,7 +107,7 @@ got_no_numeric <- got_stop %>%
 # 11209 words
 length(unique(got_no_numeric$word))
 
-# We probably don't want to include them all in a word cloud. Let's filter to only include the top 100 most frequent?
+# I probably don't want to include them all in a word cloud. Let's filter to only include the top 100 most frequent?
 got_top100 <- got_no_numeric %>% 
   count(word) %>% 
   arrange(-n) %>% 
@@ -180,7 +180,7 @@ unique(got_afinn2$word)
 # Count & plot them
 got_afinn2_n <- got_afinn2 %>% 
   count(word, sort = TRUE) %>% 
-  top_n(50) %>% # We have too many words, so we'll just select the top 50 most frequent words so the plot is readable.
+  top_n(50) %>% # I have too many words, so we'll just select the top 50 most frequent words so the plot is readable.
   mutate(word = fct_reorder(factor(word), n))
 
 
@@ -208,13 +208,13 @@ The mean (-0.5419666) and median (-1) indicate *slightly* negative overall senti
 
 # Sentiment analysis with NRC
 
-We can use the NRC lexicon to start "binning" text by the feelings they're typically associated with. As above, we'll use inner_join() to combine the GOT non-stopword text with the nrc lexicon:
+I can use the NRC lexicon to start "binning" text by the feelings they're typically associated with. As above, we'll use inner_join() to combine the GOT non-stopword text with the nrc lexicon:
 ```{r bind-bing}
 got_nrc <- got_stop %>% 
   inner_join(get_sentiments("nrc"))
 ```
 
-Wait, won't that exclude some of the words in our text? YES! We should check which are excluded using `anti_join()`:
+Wait, won't that exclude some of the words in our text? YES! I should check which are excluded using `anti_join()`:
 
 ```{r check-exclusions}
 got_exclude <- got_stop %>% 

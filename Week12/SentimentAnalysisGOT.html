@@ -13,7 +13,7 @@
 
 <title>Game of Thrones Sentiment Analysis</title>
 
-<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+<script>// Pandoc 2.9 adds attributes on both header and div. I remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
 document.addEventListener('DOMContentLoaded', function(e) {
   var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
@@ -506,7 +506,7 @@ got_no_numeric &lt;- got_stop %&gt;%
 <pre class="r"><code># 11209 words
 length(unique(got_no_numeric$word))</code></pre>
 <pre><code>## [1] 11209</code></pre>
-<pre class="r"><code># We probably don&#39;t want to include them all in a word cloud. Let&#39;s filter to only include the top 100 most frequent?
+<pre class="r"><code># I probably don&#39;t want to include them all in a word cloud. Let&#39;s filter to only include the top 100 most frequent?
 got_top100 &lt;- got_no_numeric %&gt;% 
   count(word) %&gt;% 
   arrange(-n) %&gt;% 
@@ -727,7 +727,7 @@ unique(got_afinn2$word)</code></pre>
 <pre class="r"><code># Count &amp; plot them
 got_afinn2_n &lt;- got_afinn2 %&gt;% 
   count(word, sort = TRUE) %&gt;% 
-  top_n(50) %&gt;% # We have too many words, so we&#39;ll just select the top 50 most frequent words so the plot is readable.
+  top_n(50) %&gt;% # I have too many words, so we&#39;ll just select the top 50 most frequent words so the plot is readable.
   mutate(word = fct_reorder(factor(word), n))
 
 
@@ -753,7 +753,7 @@ negative overall sentiments based on the AFINN lexicon.</p>
 </div>
 <div id="sentiment-analysis-with-nrc" class="section level1">
 <h1>Sentiment analysis with NRC</h1>
-<p>We can use the NRC lexicon to start “binning” text by the feelings
+<p>I can use the NRC lexicon to start “binning” text by the feelings
 they’re typically associated with. As above, we’ll use inner_join() to
 combine the GOT non-stopword text with the nrc lexicon:</p>
 <pre class="r"><code>got_nrc &lt;- got_stop %&gt;% 
